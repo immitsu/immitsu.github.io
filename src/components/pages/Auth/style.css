@@ -1,0 +1,35 @@
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--grey-color);
+}
+
+.auth-page__wrapper {
+  width: 16rem;
+  margin: 2rem 0;
+}
+
+.auth-page__content {
+  border-radius: 0.5rem;
+  background-color: var(--white-color);
+  padding: 1.5rem 2rem;
+}
+
+@media (max-width: 450px) {
+  .auth-page {
+    align-items: normal;
+  }
+
+  .auth-page__wrapper {
+    width: 100%;
+    margin: 0;
+  }
+
+  .auth-page__content {
+    height: 100%;
+    border-radius: unset;
+    padding: 1.5rem 3rem;
+  }
+}

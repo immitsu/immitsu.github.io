@@ -1,0 +1,49 @@
+:root {
+  --purple-color: #6151bb;
+  --white-color: #fefefe;
+  --grey-color: #dedee0;
+  --red-color: red;
+}
+
+*,
+*::before,
+*::after {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: calc(1em + 0.3vw);
+  line-height: 1.5;
+}
+
+:focus:not([tabindex='-1']) {
+  outline: 4px solid var(--purple-color);
+}
+
+.vh {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+.smaller {
+  font-size: 0.7rem;
+}
+
+.error {
+  color: var(--red-color);
+}
