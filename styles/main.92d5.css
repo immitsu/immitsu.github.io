@@ -1,0 +1,223 @@
+.field {
+  margin-top: 1.5rem;
+}
+
+.field__details {
+  margin-bottom: 0.325rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.field__wrapper {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  vertical-align: top;
+}
+
+.field input {
+  border: 2px solid var(--grey-color);
+  border-radius: 0.125rem;
+  height: 2rem;
+  padding: 0.25rem;
+  width: 100%;
+}
+
+.field input[name='password'] {
+  padding-right: 34px;
+}
+
+.field__show-icon {
+  z-index: 300;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 38px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.field__show-icon button {
+  cursor: pointer;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: 50%;
+
+  border: none;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  transition: opacity 0.3s;
+  opacity: 0.3;
+}
+
+.field__show-icon.on button {
+  background-image: url(../icons/visibility.463f.svg);
+}
+
+.field__show-icon.off button {
+  background-image: url(../icons/visibility_off.af3e.svg);
+}
+
+.field__show-icon button:hover {
+  opacity: 1;
+}
+
+.field__show-icon button:focus {
+  opacity: 1;
+  outline: none;
+}
+
+button[type='submit'] {
+  margin-top: 1.5rem;
+  cursor: pointer;
+  border: none;
+  background-color: var(--purple-color);
+  color: var(--white-color);
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+button[type='submit']:focus {
+  outline: none;
+  box-shadow: 0 0 0 4px var(--purple-color);
+  background: var(--white-color);
+  color: var(--purple-color);
+}
+
+.field__remember-checkbox {
+  font-size: 65%;
+  margin-top: 0.65rem;
+  position: relative;
+}
+
+.field__remember-checkbox label {
+  display: flex;
+  align-items: center;
+}
+
+.tick {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 0.125rem solid;
+  border-radius: 0.125rem;
+  border-color: var(--grey-color);
+  margin-right: 0.25rem;
+}
+
+[name='remember']:checked + label .tick {
+  background-image: url(../icons/check.41a8.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+[name='remember']:focus + label .tick {
+  outline: none;
+  box-shadow: 0 0 0 4px var(--purple-color);
+}
+
+[name='remember']:disabled + label .tick {
+  background-color: var(--grey-color);
+}
+
+.links {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--grey-color);
+}
+
+.auth-page__wrapper {
+  width: 16rem;
+  margin: 2rem 0;
+}
+
+.auth-page__content {
+  border-radius: 0.5rem;
+  background-color: var(--white-color);
+  padding: 1.5rem 2rem;
+}
+
+@media (max-width: 450px) {
+  .auth-page {
+    align-items: normal;
+  }
+
+  .auth-page__wrapper {
+    width: 100%;
+    margin: 0;
+  }
+
+  .auth-page__content {
+    height: 100%;
+    border-radius: unset;
+    padding: 1.5rem 3rem;
+  }
+}
+
+:root {
+  --purple-color: #6151bb;
+  --white-color: #fefefe;
+  --grey-color: #dedee0;
+  --red-color: red;
+}
+
+*,
+*::before,
+*::after {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: calc(1em + 0.3vw);
+  line-height: 1.5;
+}
+
+:focus:not([tabindex='-1']) {
+  outline: 4px solid var(--purple-color);
+}
+
+.vh {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+}
+
+.smaller {
+  font-size: 0.7rem;
+}
+
+.error {
+  color: var(--red-color);
+}
+
